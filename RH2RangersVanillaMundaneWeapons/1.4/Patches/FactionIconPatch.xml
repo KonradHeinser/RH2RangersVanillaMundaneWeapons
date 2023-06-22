@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/FactionDef[@Name="RH2_FactionBase_Rangers"]/factionIconPath</xpath>
+                <value><factionIconPath>Ranger_Icon</factionIconPath></value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Bounty.Hunters">
+                <xpath>Defs/FactionDef[@Name="RH2_FactionBase_DOOMBH"]/factionIconPath</xpath>
+                <value><factionIconPath>Bounty_Hunter_Icon</factionIconPath></value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

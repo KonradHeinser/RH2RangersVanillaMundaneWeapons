@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>[RH2] Rangers - Vanilla Mundane Weapons</name>
+  <author>alite</author>
+  <packageId>RH2RangersVanillaMundaneWeapons.Mod</packageId>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  
+  <modDependencies>
+    <li>
+      <packageId>ludeon.rimworld.ideology</packageId>
+      <displayName>Ideology</displayName>
+    </li>
+    <li>
+      <packageId>RH2.Faction.Rangers</packageId>
+      <displayName>[RH2] Factions: The Rangers</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2694372968</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>VanillaExpanded.VWE</li>
+    <li>VanillaExpanded.VWEFT</li>
+    <li>RH2.Faction.Rangers</li>
+    <li>RH2.Faction.Bounty.Hunters</li>
+  </loadAfter>
+
+  <description>
+This mod does two things. First, it replaces a lot of the non-advanced tech guns that rangers normally use with a more mundane counterpart. For example, rangers that once used a variety of pistols from the rangers mod now only use revolvers. 
+
+The second function is that it changes the Faction icons of both the Rangers mod and the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2889605556][RH2] Faction: Bounty Hunters[/url] mod to something that fits in a bit better with the vanilla faction icons. You do not need to install the Bounty Hunter mod for this mod to work, this change is just here for anyone who happens to have that mod installed.
+
+This mod was made by the request of someone who wanted to use a cherry picker to remove some of the weapons from Rangers, and ended up with a bunch of unarmed people. If you are in a similar situation, or just want to hoard the ranger guns for yourself, this should help.
+
+
+[url=https://discord.gg/fYP8qkcNDh]Discord link[/url] for those who want an easier way to ask questions, make requests, or just chat. I'll also be posting new releases there.
+
+[url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
+
+[url=https://github.com/KonradHeinser/RH2RangersVanillaMundaneWeapons][img]https://i.imgur.com/kTkpTOE.png[/img][/url]
+[url=https://ko-fi.com/alite56114][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+  </description>
+</ModMetaData>
+

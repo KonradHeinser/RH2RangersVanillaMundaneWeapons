@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Gunfighter"]/weaponTags</xpath>
+                <value>
+                    <weaponTags>
+                        <li>Revolver</li>
+                    </weaponTags>
+                </value>
+            </li>
+
+	        <li Class="PatchOperationConditional" MayRequire="RH2.Faction.Rangers">
+		        <xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags</xpath>
+		        <nomatch Class="PatchOperationAdd">
+			        <xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]</xpath>
+			        <value><weaponTags /></value>
+		        </nomatch>
+	        </li>
+
+	        <li Class="PatchOperationConditional" MayRequire="RH2.Faction.Rangers">
+		        <xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags/li[text()="BoltActionRifle"]</xpath>
+		        <nomatch Class="PatchOperationAdd">
+			        <xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags</xpath>
+			        <value>
+				        <li>BoltActionRifle</li>
+				        <li>Gun</li>
+			        </value>
+		        </nomatch>
+	        </li>
+
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Hunter"]/weaponTags</xpath>
+                <value>
+                    <weaponTags>
+                        <li>BoltActionRifle</li>
+                    </weaponTags>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Assault"]/weaponMoney</xpath>
+                <value>
+                    <weaponMoney>
+			            <min>480</min>
+			            <max>650</max>
+		            </weaponMoney>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Assault"]/weaponTags</xpath>
+                <value>
+                    <weaponTags>
+                        <li>AssaultRifle</li>
+                    </weaponTags>
+                </value>
+            </li>
+
+            <li Class="PatchOperationSequence" MayRequire="RH2.Faction.Rangers">
+                <operations>
+	                <li Class="PatchOperationConditional" MayRequire="VanillaExpanded.VWE">
+		                <xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
+		                <nomatch Class="PatchOperationAdd">
+			                <xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]</xpath>
+			                <value><weaponTags /></value>
+		                </nomatch>
+	                </li>
+
+	                <li Class="PatchOperationConditional" MayRequire="VanillaExpanded.VWE">
+		                <xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]/weaponTags/li[text()="SemiAutomaticRifle"]</xpath>
+		                <nomatch Class="PatchOperationAdd">
+			                <xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
+			                <value>
+				                <li>SemiAutomaticRifle</li>
+				                <li>Gun</li>
+			                </value>
+		                </nomatch>
+	                </li>
+
+	                <li Class="PatchOperationConditional" MayRequire="VanillaExpanded.VWE">
+		                <xpath>Defs/ThingDef[defName="VWEFT_Gun_RollingBlockRifle"]/weaponTags/li[text()="RollingBlockRifle"]</xpath>
+		                <nomatch Class="PatchOperationAdd">
+			                <xpath>Defs/ThingDef[defName="VWEFT_Gun_RollingBlockRifle"]/weaponTags</xpath>
+			                <value>
+				                <li>RollingBlockRifle</li>
+			                </value>
+		                </nomatch>
+	                </li>
+                </operations>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Sharpshooter"]/weaponTags</xpath>
+                <value>
+                    <weaponTags>
+                        <li>SniperRifle</li>
+                        <li MayRequire="VanillaExpanded.VWEFT">RollingBlockRifle</li>
+                        <li MayRequire="VanillaExpanded.VWE">SemiAutomaticRifle</li>
+                    </weaponTags>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Elite"]/weaponTags</xpath>
+                <value>
+                    <weaponTags>
+                        <li>RN_KBARailgun</li>
+                        <li>RN_ChargeCarbine</li>
+                    </weaponTags>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
+                <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Trader"]/weaponTags</xpath>
+                <value>
+                    <weaponTags>
+                        <li>BoltActionRifle</li>
+                    </weaponTags>
+                </value>
+            </li>
+
+            <li Class="PatchOperationFindMod" MayRequire="RH2.Faction.Rangers">
+		        <mods>
+			        <li>Vanilla Weapons Expanded - Laser</li>
+		        </mods>
+
+		        <match Class="PatchOperationSequence">
+		            <operations>
+
+                        <li Class="PatchOperationConditional">
+		                    <xpath>Defs/ThingDef[defName="VWEFT_Gun_SalvagedLaserHuntingRifle"]/weaponTags</xpath>
+		                    <nomatch Class="PatchOperationAdd">
+			                    <xpath>Defs/ThingDef[defName="VWEFT_Gun_SalvagedLaserHuntingRifle"]</xpath>
+			                    <value><weaponTags /></value>
+		                    </nomatch>
+	                    </li>
+
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs/ThingDef[defName="VWEFT_Gun_SalvagedLaserHuntingRifle"]/weaponTags</xpath>
+                            <value><li>SalvagedLaserHuntingRifle</li></value>
+                        </li>
+
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Sharpshooter"]/weaponTags</xpath>
+                            <value>
+                                <li>SalvagedLaserHuntingRifle</li>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </li>
+        </operations>
+    </Operation>
+</Patch>
