@@ -2,6 +2,40 @@
 <Patch>
     <Operation Class="PatchOperationSequence">
         <operations>
+            <li Class="PatchOperationConditional">
+		        <xpath>Defs/ThingDef[defName="Gun_ChargeRifle"]/weaponTags/li[text()="ChargeRifle"]</xpath>
+		        <nomatch Class="PatchOperationAdd">
+			        <xpath>Defs/ThingDef[defName="Gun_ChargeRifle"]/weaponTags</xpath>
+			        <value>
+				        <li>ChargeRifle</li>
+			        </value>
+		        </nomatch>
+	        </li>
+
+	        <li Class="PatchOperationConditional">
+		        <xpath>Defs/ThingDef[defName="Gun_ChargeLance"]/weaponTags/li[text()="ChargeLance"]</xpath>
+		        <nomatch Class="PatchOperationAdd">
+			        <xpath>Defs/ThingDef[defName="Gun_ChargeLance"]/weaponTags</xpath>
+			        <value>
+				        <li>ChargeLance</li>
+			        </value>
+		        </nomatch>
+	        </li>
+
+            <li Class="PatchOperationAdd" MayRequire="RH2.Faction.Bounty.Hunters">
+                <xpath>Defs/PawnKindDef[defName="RH2_BountyHunters_FNG" or defName="RH2_BountyHunters_Gunner" or defName="RH2_BountyHunters_Assault" or defName="RH2_BountyHunters_Boss" or defName="RH2_BountyHunters_EliteGunner" or defName="RH2_BountyHunters_Elite" or defName="RH2_BountyHunters_Trader"]/weaponTags</xpath>
+                <value><li>ChargeRifle</li></value>
+            </li>
+
+            <li Class="PatchOperationAdd" MayRequire="RH2.Faction.Bounty.Hunters">
+                <xpath>Defs/PawnKindDef[defName="RH2_BountyHunters_Sharpshooter"]/weaponTags</xpath>
+                <value><li>ChargeLance</li></value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
             <li Class="PatchOperationReplace" MayRequire="RH2.Faction.Rangers">
                 <xpath>Defs/PawnKindDef[defName="RH2_Rangers_Gunfighter"]/weaponTags</xpath>
                 <value>
@@ -25,7 +59,6 @@
 			        <xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags</xpath>
 			        <value>
 				        <li>BoltActionRifle</li>
-				        <li>Gun</li>
 			        </value>
 		        </nomatch>
 	        </li>
@@ -74,7 +107,6 @@
 			                <xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
 			                <value>
 				                <li>SemiAutomaticRifle</li>
-				                <li>Gun</li>
 			                </value>
 		                </nomatch>
 	                </li>
