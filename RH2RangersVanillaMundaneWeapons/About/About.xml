@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>[RH2] Rangers - Vanilla Mundane Weapons</name>
+  <name>[RH2] Rangers and Bounty hunters - Vanilla Mundane Weapons</name>
   <author>alite</author>
   <packageId>RH2RangersVanillaMundaneWeapons.Mod</packageId>
   <supportedVersions>
@@ -11,11 +11,6 @@
     <li>
       <packageId>ludeon.rimworld.ideology</packageId>
       <displayName>Ideology</displayName>
-    </li>
-    <li>
-      <packageId>RH2.Faction.Rangers</packageId>
-      <displayName>[RH2] Factions: The Rangers</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2694372968</steamWorkshopUrl>
     </li>
   </modDependencies>
 
